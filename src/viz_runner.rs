@@ -44,7 +44,7 @@ impl<'a> VizRunner<'a> {
 struct VizRunnerInternal<'a> {
     context: Context<'a>,
     fft: AudioFft,
-    viz: visualizer::Visualizer,
+    viz: visualizer::FFTDataOutput,
     external: Option<VizRunner<'a>>,
     stream: Option<PulseAudioStream<'a>>,
 }
@@ -57,7 +57,7 @@ impl<'a> VizRunnerInternal<'a> {
         VizRunnerInternal {
             context: context,
             fft: AudioFft::new(1024, 2),
-            viz: visualizer::Visualizer::new(),
+            viz: visualizer::FFTDataOutput::new(),
             external: None,
             stream: None
         }

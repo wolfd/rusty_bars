@@ -45,7 +45,7 @@ impl FFTDataOutput {
     /// Instantiate a new visualizer. Takes over the terminal with ncurses.
     pub fn new() -> FFTDataOutput {
         FFTDataOutput{
-            columns: 64
+            columns: 10
         }
     }
 
